@@ -1,11 +1,14 @@
 package main
 
 import (
+	"time"
+
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
 
 func Webhook(c echo.Context) error {
+	time.Sleep(3 * time.Second)
 	return c.JSON(200, map[string]string{
 		"status": "good",
 	})
